@@ -9,8 +9,6 @@ import { routes } from "./mockups/routes";
 import { AppRoutes } from "./modelTypes/routes";
 
 function App() {
-  console.info("App ====================");
-
   return (
     <ThemeProvider theme={theme}>
       <Router>
