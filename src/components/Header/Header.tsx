@@ -12,8 +12,6 @@ import {
 } from "./style";
 
 const Header = () => {
-  console.info("Header======================");
-
   return (
     <Container>
       <InfoPage>
