@@ -31,7 +31,6 @@ const SideBarApp = () => {
   const navigaTo = useCallback((url: string) => {
     navigate(url);
   }, []);
-  console.info("SideBar===============");
   return (
     <Container>
       <TopSection>
