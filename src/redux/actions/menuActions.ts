@@ -24,3 +24,19 @@ export const setSelectedItem =
       payload: item,
     });
   };
+
+export const getListRoutesAction =
+  () => async (dispatch: any, getState: any) => {
+    dispatch({
+      type: types.GET_LIST_ROUTES_REQUEST,
+    });
+    try {
+      const result: any = await services.getRoutesList();
+      dispatch({
+        type: types.SET_LIST_ROUTES,
+        payload: result.data,
+      });
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
