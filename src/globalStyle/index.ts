@@ -22,3 +22,7 @@ export const ContentApp = styled.div`
   padding: 40px 35px;
   flex: 1;
 `;
+export const ContentPageWrap = styled.div`
+  display: flex;
+  margin-top: 45px;
+`;
