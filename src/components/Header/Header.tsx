@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import Notif from "../../assets/icons/Notif";
 import ProfileImage from "../../assets/images/profile.jpeg";
+import headerSelector from "../../redux/selectors/headerSelector";
 import {
   Container,
   Slug,
@@ -12,11 +15,14 @@ import {
 } from "./style";
 
 const Header = () => {
+  const location = useLocation();
+  const { headerInfo } = useSelector(headerSelector(location.pathname));
+
   return (
     <Container>
       <InfoPage>
-        <Title>Title</Title>
-        <Slug>Slug</Slug>
+        <Title>{headerInfo?.title}</Title>
+        <Slug>{headerInfo?.slug}</Slug>
       </InfoPage>
       <InfoUserNotif>
         <NotifWrap>
